@@ -16,5 +16,11 @@
         <toc-element topic="Configuring-an-Instance.md"/>
     </toc-element>
     <toc-element toc-title="Contributing"/>
-    <toc-element toc-title="Plugin Development"/>
+    <toc-element toc-title="Plugin Development">
+        <toc-element topic="Creating-a-Plugin.md"/>
+        <toc-element topic="Using-Queries.md"/>
+        <toc-element topic="Creating-Routes.md"/>
+        <toc-element topic="Listening-for-Events.md"/>
+        <toc-element topic="Storing-Data.md"/>
+    </toc-element>
 </instance-profile>

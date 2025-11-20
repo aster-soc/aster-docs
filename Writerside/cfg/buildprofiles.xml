@@ -6,8 +6,12 @@
     <variables></variables>
     <build-profile instance="a">
         <variables>
+            <primary-color>iris</primary-color>
             <noindex-content>false</noindex-content>
         </variables>
+        <footer>
+            <social type="github" href="https://github.com/aster-soc" />
+        </footer>
     </build-profile>
 
 </buildprofiles>
