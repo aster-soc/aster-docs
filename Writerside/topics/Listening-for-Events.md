@@ -11,7 +11,16 @@ This method requires Kotlin since it's heavy on Kotlin-specific features. It's p
 is automatically cast to the correct type.
 
 ```kotlin
-addListener<NoteLikeEvent> { event -> // event is the NoteLikeEvent type
+EventRegistry.addListener<NoteLikeEvent> { event -> // event is the NoteLikeEvent type
+	println("${event.user.id} liked note ${event.note.id}")
+}
+```
+
+We can also add priority to event listeners so they run before the others. If you don't have an explicit reason why to 
+use higher priority, don't.
+
+```kotlin
+EventRegistry.addListener<NoteLikeEvent>(ListenerPriority.High) { event ->
 	println("${event.user.id} liked note ${event.note.id}")
 }
 ```
@@ -21,10 +30,15 @@ addListener<NoteLikeEvent> { event -> // event is the NoteLikeEvent type
 This can also be done in Kotlin, and would look like this. 
 
 ```kotlin
-addListener(NoteLikeEvent::class) { event ->
-	event as NoteLikeEvent
-    println("${event.user.id} liked note ${event.note.id}")
+EventRegistry.addListener(NoteCreateEvent::class) { event ->
+	event as NoteCreateEvent
+	println(event.note)
 }
+
+EventRegistry.addListener(NoteCreateEvent::class, { event ->
+	event as NoteCreateEvent
+	println(event.note)
+}, ListenerPriority.High)
 ```
 
 TODO: Java
