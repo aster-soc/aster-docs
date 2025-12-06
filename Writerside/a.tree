@@ -22,5 +22,7 @@
         <toc-element topic="Creating-Routes.md"/>
         <toc-element topic="Listening-for-Events.md"/>
         <toc-element topic="Storing-Data.md"/>
+        <toc-element topic="Handling-Activities.md"/>
+        <toc-element topic="Creating-Activities.md"/>
     </toc-element>
 </instance-profile>
